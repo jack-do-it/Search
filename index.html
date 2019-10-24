@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet">
+    <title>Search</title>
+</head>
+<body>
+    <div class="container">
+       <form class="sidebar">
+            <div class="sidebar_header__mobile">
+                <span class="sidebar_header--text">Filter</span>
+                <span class="sidebar_header--close-button">+</span>
+            </div>
+            <div class="sidebar_item styles_filter">
+                <div class="sidebar_item__header">
+                    <p class="sidebar_item__title">Styles</p>
+                    <div class="hide_button"></div>
+                </div>
+                <div class="sidebar_item__content styles-previews_container">
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="bohemian-style" name="bohemian-style"class="styles_checkbox">
+                        <label for="bohemian-style" class="styles-preview_title">Bohemian (92)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="contemporary-style" name="contemporary-style" class="styles_checkbox" checked>
+                        <label for="contemporary-style" class="styles-preview_title">Contemporary (888)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/outdoor-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="outdoor-style" name="outdoor-style"class="styles_checkbox">
+                        <label for="outdoor-style" class="styles-preview_title">Outdoor (187)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/traditional-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="traditional-style" name="traditional-style"class="styles_checkbox">
+                        <label for="traditional-style" class="styles-preview_title">Traditional (562)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/outdoor-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <div class="styles-preview_image--transparent"></div>
+                        <input type="checkbox" id="traditional-style-2" name="traditional-style-2"class="styles_checkbox">
+                        <label for="traditional-style-2" class="styles-preview_title">Traditional (562)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/traditional-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <div class="styles-preview_image--transparent"></div>
+                        <input type="checkbox" id="traditional-style-3" name="traditional-style-3"class="styles_checkbox">
+                        <label for="traditional-style-3" class="styles-preview_title">Traditional (562)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="bohemian-style-2" name="bohemian-style-2"class="styles_checkbox">
+                        <label for="bohemian-style-2" class="styles-preview_title">Bohemian (92)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="contemporary-style-2" name="contemporary-style-2" class="styles_checkbox">
+                        <label for="contemporary-style-2" class="styles-preview_title">Contemporary (888)</label>
+                    </div>
+                </div>
+                <button type="submit" class="styles_submit__button">More Styles +</button>
+            </div>
+
+            <!--Draggable filter-->
+
+            <div class="sidebar_item price_filter">
+                <p class="sidebar_item__title">Price Range</p>
+
+                <div class="sidebar_item_cost_wrapper">
+                    <div class="sidebar_item_cost_item">
+                        <p class="sidebar_item_cost_item_title">Min $</p>
+                        <input type="text" value="0" id="drag_item_input_min" class="sidebar_item_cost_item_input">
+                    </div>
+                    <div class="sidebar_item_cost_item">
+                        <p class="sidebar_item_cost_item_title">Max $</p>
+                        <input type="text" value="4060" id="drag_item_input_max" class="sidebar_item_cost_item_input">
+                    </div>
+                    <button class="sidebar_item_cost_btn" type="submit">Go</button>
+                </div>
+                <div class="sidebar_item_cost_drag_wrapper">
+                    <div class="sidebar_item_cost_drag_area" id="drag_item_area">
+                        <div class="sidebar_item_cost_drag_item left" id="drag_item_min">
+                            <img class="sidebar_item_cost_drag_item--icon" src="./images/dots-menu.svg" alt="">
+                        </div>
+                        <div class="sidebar_item_cost_drag_item right" id="drag_item_max">
+                            <img class="sidebar_item_cost_drag_item--icon" src="./images/dots-menu.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar_item colors_filter">
+                <div class="sidebar_item__header">
+                    <p class="sidebar_item__title">Colors</p>
+                    <div class="colors_filter__tooltip"></div>
+                    <div class="hide_button"></div>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" class="sidebar_item_row_checkbox" id="row1" value="red" checked>
+                    <label for="row1" class="sidebar_item_row_label">Red</label>
+                    <span class="sidebar_item_row_text">
+                        1,221
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" class="sidebar_item_row_checkbox" id="row2" value="red">
+                    <label for="row2" class="sidebar_item_row_label">Blue</label>
+                    <span class="sidebar_item_row_text">
+                        1,601
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" class="sidebar_item_row_checkbox" id="row3" value="red">
+                    <label for="row3" class="sidebar_item_row_label">Green</label>
+                    <span class="sidebar_item_row_text">
+                        134
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" class="sidebar_item_row_checkbox" id="row4" value="red">
+                    <label for="row4" class="sidebar_item_row_label">White</label>
+                    <span class="sidebar_item_row_text">
+                        656
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" class="sidebar_item_row_checkbox" id="row5" value="red">
+                    <label for="row5" class="sidebar_item_row_label">Yellow</label>
+                    <span class="sidebar_item_row_text">
+                        11,684
+                    </span>
+            </div>
+                <button class="sidebar_item_color_btn">More Colors +</button>
+            </div>
+        
+            <div class="sidebar_item reviews_section">
+                    <div class="sidebar_item__header">
+                            <p class="sidebar_item__title">Reviews</p>
+                    </div>
+                    <div class="reviews_section__wrapper">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                    </div>
+            </div>
+        </form>
+
+       <div class="products_container">
+           <form class="searchbar" name="searchForm">
+                <input type="search" id="searchbar" class="searchbar_textarea" name="searchbar" maxlength="250" placeholder="Search">
+                <button class="searchbar_button" name="submitButton">
+                    <img class="searchbar_button__icon" src="./images/search-button.svg" alt="">
+                </button>
+           </form>
+           <div class="products-previews_container">
+                <div class="products-previews_header__wrapper">
+                    <span class="products-previews_header">New Arrival Area Rugs</span>
+                    <span class="products-previews_quantity">431 Results</span>
+                    <button class="show-filter-menu_button">Filter</button>
+                </div>
+
+<!--               Example of cards container with card example-->
+
+<!--               <div class="cardsContainer">-->
+<!--                   <div class="product_preview">-->
+<!--                       <img class="product_preview__image" src="https://images.express.com/is/image/expressfashion/0097_09702809_1416?cache=on&amp;wid=361&amp;fmt=jpeg&amp;qlt=75,1&amp;resmode=sharp2&amp;op_usm=1,1,5,0&amp;defaultImage=Photo-Coming-Soon" alt="...">-->
+<!--                       <div class="product_preview_content__wrapper">-->
+<!--                           <span class="product_name">solid city shirt by express</span>-->
+
+<!--                           <div class="reviews_wrapper">-->
+<!--                               <div class="reviews_wrapper_unactive">-->
+<!--                                   <div class="reviews_wrapper_active" style="width: 67%">-->
+<!--                                       <img class="reviews_icon" src="./images/rating-scored.svg" alt="...">-->
+<!--                                       <img class="reviews_icon" src="./images/rating-scored.svg" alt="...">-->
+<!--                                       <img class="reviews_icon" src="./images/rating-scored.svg" alt="...">-->
+<!--                                       <img class="reviews_icon" src="./images/rating-scored.svg" alt="...">-->
+<!--                                       <img class="reviews_icon" src="./images/rating-scored.svg" alt="...">-->
+<!--                                   </div>-->
+<!--                                   <img class="reviews_icon" src="./images/rating-unactive.svg" alt="...">-->
+<!--                                   <img class="reviews_icon" src="./images/rating-unactive.svg" alt="...">-->
+<!--                                   <img class="reviews_icon" src="./images/rating-unactive.svg" alt="...">-->
+<!--                                   <img class="reviews_icon" src="./images/rating-unactive.svg" alt="...">-->
+<!--                                   <img class="reviews_icon" src="./images/rating-unactive.svg" alt="...">-->
+<!--                               </div>-->
+<!--                               <span class="rewievs_amount">(134)</span>-->
+<!--                           </div>-->
+<!--                           <div class="shipping-offer_wrapper">-->
+<!--                               <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="...">-->
+<!--                               <span class="shipping-offer_text">Shipping Offer</span>-->
+<!--                           </div>-->
+<!--                           <span class="product_price">49-->
+<!--                                <span class="product_price_top">9</span>-->
+<!--                            </span>-->
+<!--                           <div class="options_wrapper">-->
+<!--                               <span class="options_text">6 Colors / 5 Sizes</span>-->
+<!--                               <img class="options__icon" src="./images/wishlist.svg" alt="...">-->
+<!--                           </div>-->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--               </div>-->
+
+           </div>
+       </div>
+
+    </div>
+
+    <script src="js/polyfills/promisePolyfill.js"></script>
+    <script src="js/polyfills/fetchPolyfill.js"></script>
+    <script src="js/polyfills/removePolyfill.js"></script>
+
+    <script src="js/MobileFilter.js"></script>
+    <script src="js/functionHelpers.js"></script>
+    <script src="js/ProductCard.js"></script>
+    <script src="js/CardsContainer.js"></script>
+    <script src="js/APIHelpers.js"></script>
+    <script src="js/Search.js"></script>
+    <script src="js/App.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
